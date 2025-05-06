@@ -1,7 +1,8 @@
 {
-  "name": "comidita-app",
+  "name": "react-fastify-template",
+  "private": true,
   "version": "0.0.0",
-  "description": "Fitness/Tracker app",
+  "description": "Starter template using pnpm for package manager, React 19 with Tanstack Router and NodeJS with Fastify.",
   "main": "index.js",
   "scripts": {
     "preinstall": "npx only-allow pnpm"
