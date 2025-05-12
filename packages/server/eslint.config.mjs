@@ -24,6 +24,7 @@ export default tseslint.config(
     },
     rules: {
       eqeqeq: 'error',
+      '@typescript-eslint/consistent-type-imports': ['error', { fixStyle: 'inline-type-imports' }],
     },
   },
   eslintPluginPrettier,
