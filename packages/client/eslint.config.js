@@ -34,6 +34,7 @@ export default tseslint.config(
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
       eqeqeq: 'error',
       '@typescript-eslint/consistent-type-imports': ['error', { fixStyle: 'inline-type-imports' }],
+      '@typescript-eslint/no-import-type-side-effects': 'error',
     },
   },
   eslintPluginPrettier,
