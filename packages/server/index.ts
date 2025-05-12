@@ -4,7 +4,7 @@ const fastify = Fastify({
   logger: true,
 });
 
-fastify.get('/', function (request, reply) {
+fastify.get('/', function (_request, reply) {
   reply.send({ hello: 'world' });
 });
 
@@ -14,5 +14,5 @@ fastify.listen({ port: 3000 }, function (err, address) {
     fastify.log.error(err);
     process.exit(1);
   }
-  // Server is now listening on ${address}
+  fastify.log.info(`server listening on ${address}`);
 });
