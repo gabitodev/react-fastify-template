@@ -5,7 +5,18 @@
   "description": "Starter template using pnpm for package manager, React 19 with Tanstack Router and NodeJS with Fastify.",
   "main": "index.js",
   "scripts": {
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "start": "NODE_ENV=production node ./build/index.js",
+    "staging": "NODE_ENV=staging node ./build/index.js",
+    "client:dev": "pnpm --filter client dev",
+    "server:dev": "pnpm --filter server dev",
+    "client:staging": "pnpm --filter client staging",
+    "server:staging": "pnpm --filter server staging",
+    "build": "pnpm run build:client && pnpm run build:server && cp -r packages/server/build build && cp -r packages/client/dist build && pnpm run build:clean",
+    "build:client": "rm -rf packages/client/dist && pnpm --filter client build",
+    "build:server": "rm -rf packages/server/build && pnpm --filter server build",
+    "build:clean": "rm -rf packages/client/dist && rm -rf packages/server/build",
+    "lint": "pnpm --filter server lint"
   },
   "author": "Gabriel Garcia",
   "license": "ISC",
