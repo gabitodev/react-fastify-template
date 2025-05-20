@@ -16,7 +16,7 @@
     "build:client": "rm -rf packages/client/dist && pnpm --filter client build",
     "build:server": "rm -rf packages/server/build && pnpm --filter server build",
     "build:clean": "rm -rf packages/client/dist && rm -rf packages/server/build",
-    "lint": "pnpm --filter server lint"
+    "lint": "pnpm --filter server lint && pnpm --filter client lint"
   },
   "author": "Gabriel Garcia",
   "license": "ISC",
