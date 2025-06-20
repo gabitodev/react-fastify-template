@@ -11,6 +11,7 @@ export default tseslint.config(
     ignores: ['.node_modules/', '.build/', '.dist/'],
   },
   {
+    files: ['**/*.{ts,tsx}'],
     extends: [
       js.configs.recommended,
       ...tseslint.configs.recommendedTypeChecked,
@@ -18,7 +19,6 @@ export default tseslint.config(
       eslintReact.configs['recommended-typescript'],
       eslintPluginPrettier,
     ],
-    files: ['**/*.{ts,tsx}'],
     languageOptions: {
       parserOptions: {
         project: ['./tsconfig.node.json', './tsconfig.app.json'],
